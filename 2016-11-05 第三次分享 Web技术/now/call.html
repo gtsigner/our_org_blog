@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+        <script src="./node_modules/jquery/dist/jquery.js"></script>
+   </head>
+        <body>
+            
+            <div>
+                <span id="ret">
+                1
+                </span>
+            </div>
+
+
+
+
+            <script>
+
+                    $(function(){
+console.log(1);
+$.get("http://localhost:3000/call.html",function(ret){
+    console.log(2);
+})
+$.get("http://localhost:3000/call.html",function(ret){
+    console.log(2);
+})
+$.get("http://localhost:3000/call.html",function(ret){
+    console.log(2);
+})
+$.get("http://localhost:3000/call.html",function(ret){
+    console.log(2);
+})
+console.log(3);
+
+
+                    })
+
+            </script>
+        </body>
+</html>
