@@ -6,12 +6,13 @@
 >热爱技术的群体。
 
 ##对Web服务器的理解
+-		
 
 ##搭建Web服务器尝鲜
-
+-	
 
 ##流行的Web服务器
-
+-	
 
 ##Apache与Nginx的优缺点
 >如今我已经将所有的服务器的lamp环境，全部替换成lnmp环境
@@ -63,7 +64,7 @@
 	>  msg：./configure: error: C compiler cc is not found
 	>  ```
 	
-![](./images/err_cnotfound.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/err_cnotfound.png)
 -	>```
 		>#yum install gcc
 		>try again
@@ -75,21 +76,21 @@
 		statically from the source with nginx by using --with-pcre=<path> option.
 
 	>```
-![](./images/err_httprewrite.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/err_httprewrite.png)
 	>```	
 	>Chinese：http重写模块需要pcre lib库，你可以配置--with-out..去取消这个模块，否则请安装pcre到system库，或者指定您安装的--with-pcre=path
 	>#好，既然他需要这个东西，我们就去安装就行了
 	>上图：
 	>```
 
-![](./images/err_pcrehavainstalled.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/err_pcrehavainstalled.png)
 
 	>```
 	>这下尴尬了，系统说已经装了这个东西了。不急，我们先看看dev开发版本得库是不是安装了
 	>，因为软件编译嘛，肯定是需要开发版本的源代码，才可以编译，至少我个人是这么理解的。那我去试一试
 	>```
 	
-![](./images/suc_installpcre.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/suc_installpcre.png)
 
 	>```
 	>哎哟，有这个，管他的装上再说
@@ -97,7 +98,7 @@
 	>。。。。过度时间，么么哒
 	>```
 
-![](./images/err_gizpnotfound.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/err_gizpnotfound.png)
 	
 	>```
 	>哎呀又是一个gzip库，我们按照原来的方式去处理就行了
@@ -108,7 +109,7 @@
 	>哎哟，成功了哟
 	>```
 
-![](./images/suc_configure.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/suc_configure.png)
  
 >##总结
 >- nginx安装需要的一些工具：gcc
@@ -167,7 +168,7 @@ doc:
 >
 >- 发现访问不了，尴尬，我的是跑的虚拟机，没道理啊，我xshell都能连，就说明我ip是正确的，所以我确定可能是端口没有开放访问
 
-![](./images/http_err.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/http_err.png)
 
 
 >###开放80web端口
@@ -175,35 +176,47 @@ doc:
 >- 2.记住，不懂得东西，千万不要放过任何一个提示，任何一行英文，否则你懂得。。。。、
 >- 3.现在看看22端口
 
-![](./images/iptables_22.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/iptables_22.png)
 
 >- 4.#按照他得方式给他一个：-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
 >- 5.想知道这些参数的什么意思，请自行百度哈
 
-![](./images/iptables_80.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/iptables_80.png)
 
 >- 6.改了配置总得重启吧? 走着: # systemctl restart iptables
 >- 7.对了,新版的linux 好像都在使用systemctl来进行service控制了，我们要跟上时代的脚步喔
 
 >- 成功了
 
-![](./images/show_suc.png)
+![](https://raw.githubusercontent.com/zhaojunlike/our_org_blog/master/2016-11-12%20第四次分享%20web%20server/images/show_suc.png)
 
 
 ##和nginx交流
+-	
 
 ##nginx的配置
+-	
 
 ##运维所需要的知识
+-	
 
 ##nginx配搭PHP
+-	
 
 ##nginx进行rewrite重写和重写规则
+-	
 
 ##压力测试
+-	
 
 ##nginx的反向代理
+-	
 
 ##nginx的集群
+-	
 
-##
+##推荐网址
+-	http://www.wdlinux.cn/wdcp/   一件安装linux环境
+-	https://amh.sh/index.htm?amh  主机控制面板
+
+
